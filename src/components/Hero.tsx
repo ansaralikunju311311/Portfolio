@@ -32,7 +32,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-2xl md:text-4xl font-display font-semibold text-slate-100 mb-8"
+          className="text-2xl md:text-4xl font-display font-semibold text-text-heading mb-8"
         >
           MERN Stack Developer
         </motion.h2>
@@ -41,7 +41,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-text-base mb-12 max-w-2xl mx-auto leading-relaxed"
         >
           I build scalable full-stack web applications with a focus on backend systems and real-time features.
         </motion.p>
@@ -61,7 +61,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="group flex items-center space-x-2 px-8 py-4 bg-slate-800 border border-slate-700 text-slate-100 rounded-xl font-semibold hover:bg-slate-700 transition-all hover:scale-105 active:scale-95 shadow-lg"
+            className="group flex items-center space-x-2 px-8 py-4 bg-surface border border-border-card text-text-heading rounded-xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 shadow-lg"
           >
             <Mail size={18} className="group-hover:rotate-12 transition-transform" />
             <span>Contact Me</span>

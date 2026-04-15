@@ -4,21 +4,41 @@
   --color-primary: #3b82f6;
   --color-secondary: #10b981;
   --color-accent: #8b5cf6;
-  --color-background: #030712;
-  --color-surface: #0f172a;
   --color-muted: #64748b;
   
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Outfit", system-ui, sans-serif;
+  
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-text-base: var(--text-base);
+  --color-text-heading: var(--text-heading);
+  --color-border-card: var(--border-card);
+}
+
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text-base: #475569;
+  --text-heading: #0f172a;
+  --border-card: #e2e8f0;
+}
+
+.dark {
+  --bg: #030712;
+  --surface: #0f172a;
+  --text-base: #94a3b8;
+  --text-heading: #f3f4f6;
+  --border-card: #1e293b;
 }
 
 @layer base {
   body {
-    @apply bg-background text-slate-300 font-sans antialiased;
+    @apply bg-background text-text-base font-sans antialiased transition-colors duration-300;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-slate-100 font-semibold;
+    @apply font-display text-text-heading font-semibold;
   }
 }
 

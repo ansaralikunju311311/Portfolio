@@ -23,7 +23,7 @@ const skillCategories = [
   {
     title: "Tools",
     icon: <Wrench size={24} />,
-    color: "text-slate-100",
+    color: "text-text-heading",
     skills: ["Git & GitHub", "Docker", "Postman"],
   },
   {
@@ -56,7 +56,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 px-4">
+    <section id="skills" className="py-24 px-4 bg-background transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
@@ -79,19 +79,19 @@ export default function Skills() {
             <motion.div
               key={category.title}
               variants={item}
-              className="p-8 glass rounded-3xl group hover:border-slate-600 transition-all duration-300"
+              className="p-8 glass rounded-3xl group hover:border-primary/30 transition-all duration-300 shadow-sm dark:shadow-none"
             >
               <div className="flex items-center space-x-3 mb-6">
-                <div className={`${category.color} bg-slate-100/10 p-2 rounded-lg`}>
+                <div className={`${category.color} bg-slate-500/10 p-2 rounded-lg`}>
                    {category.icon}
                 </div>
-                <h3 className="text-xl font-display font-bold text-slate-100">{category.title}</h3>
+                <h3 className="text-xl font-display font-bold text-text-heading">{category.title}</h3>
               </div>
               <ul className="space-y-3">
                 {category.skills.map((skill) => (
                   <li key={skill} className="flex items-center space-x-2 group/item">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover/item:bg-primary transition-colors" />
-                    <span className="text-slate-400 group-hover/item:text-slate-200 transition-colors uppercase tracking-widest text-[10px] font-bold">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover/item:bg-primary transition-colors" />
+                    <span className="text-text-base group-hover/item:text-text-heading transition-colors uppercase tracking-widest text-[10px] font-bold">
                         {skill}
                     </span>
                   </li>

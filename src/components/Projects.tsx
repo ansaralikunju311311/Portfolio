@@ -7,7 +7,7 @@ interface ProjectProps {
   description: string;
   features: string[];
   tech: string[];
-  links: { github: string; demo: string };
+  links: { github: string; demo?: string };
   isFeatured?: boolean;
   demoAccess?: string;
   onTryDemo?: () => void;
@@ -18,16 +18,16 @@ const ProjectCard = ({ title, description, features, tech, links, isFeatured, de
     initial={{ opacity: 0, scale: 0.95 }}
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
-    className={`p-1 rounded-[2rem] bg-gradient-to-br transition-all duration-500 hover:scale-[1.02] ${
+    className={`p-1 rounded-[2.5rem] bg-gradient-to-br transition-all duration-500 hover:scale-[1.01] ${
       isFeatured 
-        ? "from-primary/40 via-accent/40 to-secondary/40 lg:col-span-2" 
-        : "from-slate-800 to-slate-900 border border-slate-700/50"
+        ? "from-primary/40 via-accent/40 to-secondary/40 lg:col-span-2 shadow-xl shadow-primary/5" 
+        : "from-border-card to-transparent border border-border-card dark:from-slate-800 dark:to-slate-900 shadow-lg dark:shadow-none"
     }`}
   >
-    <div className="h-full w-full bg-[#0a0f1d] rounded-[1.8rem] p-8 md:p-12 overflow-hidden relative group">
+    <div className="h-full w-full bg-surface rounded-[2.3rem] p-8 md:p-12 overflow-hidden relative group transition-colors duration-300">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 p-8 text-slate-800 -z-0 opacity-10 group-hover:opacity-20 transition-opacity">
-        {isFeatured ? <Ticket size={200} /> : <Video size={100} />}
+      <div className="absolute top-0 right-0 p-8 text-text-base -z-0 opacity-5 group-hover:opacity-10 transition-opacity">
+        {isFeatured ? <Ticket size={240} /> : <Video size={120} />}
       </div>
 
       <div className="relative z-10">
@@ -38,56 +38,58 @@ const ProjectCard = ({ title, description, features, tech, links, isFeatured, de
             </span>
           )}
           {tech.map((t) => (
-            <span key={t} className="px-3 py-1 bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-widest rounded-full">
+            <span key={t} className="px-3 py-1 bg-slate-500/10 text-text-base text-[10px] font-bold uppercase tracking-widest rounded-full">
               {t}
             </span>
           ))}
         </div>
 
-        <h3 className={`font-display font-bold mb-4 ${isFeatured ? "text-4xl md:text-5xl" : "text-3xl"} text-slate-100`}>
+        <h3 className={`font-display font-bold mb-4 ${isFeatured ? "text-4xl md:text-6xl" : "text-3xl"} text-text-heading tracking-tight`}>
           {title}
         </h3>
 
-        <p className="text-slate-400 text-lg mb-8 max-w-2xl leading-relaxed">
+        <p className="text-text-base text-lg mb-10 max-w-3xl leading-relaxed">
           {description}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {features.map((feature, i) => (
-              <div key={i} className="flex items-start space-x-3 text-slate-300">
-                <div className="mt-1 p-1 bg-slate-800 rounded text-primary">
+              <div key={i} className="flex items-start space-x-3 text-text-base">
+                <div className="mt-1 p-1 bg-primary/10 rounded-lg text-primary">
                   <ChevronRight size={14} />
                 </div>
-                <span className="text-sm font-medium">{feature}</span>
+                <span className="text-sm font-medium leading-snug">{feature}</span>
               </div>
             ))}
         </div>
 
         {demoAccess && (
-           <div className="mb-8 p-4 bg-secondary/10 border border-secondary/20 rounded-xl">
-             <div className="flex items-center space-x-2 text-secondary mb-2">
-               <Shield size={16} />
-               <h4 className="text-xs font-bold uppercase tracking-widest">Demo Access</h4>
+           <div className="mb-10 p-6 bg-secondary/10 border border-secondary/20 rounded-2xl">
+             <div className="flex items-center space-x-2 text-secondary mb-3">
+               <Shield size={18} />
+               <h4 className="text-xs font-bold uppercase tracking-widest">Demo Environment</h4>
              </div>
-             <p className="text-sm text-slate-400">
+             <p className="text-sm text-text-base font-medium">
                {demoAccess}
              </p>
            </div>
         )}
 
-        <div className="flex flex-wrap items-center gap-6">
-          <a href={links.github} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-slate-100 hover:text-primary transition-colors font-semibold">
-            <Github size={20} />
-            <span>GitHub</span>
+        <div className="flex flex-wrap items-center gap-8">
+          <a href={links.github} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-text-heading hover:text-primary transition-all font-bold group/link">
+            <Github size={22} className="group-hover/link:scale-110 transition-transform" />
+            <span className="border-b-2 border-transparent group-hover/link:border-primary">GitHub Code</span>
           </a>
-          <a href={links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-slate-100 hover:text-primary transition-colors font-semibold">
-            <ExternalLink size={20} />
-            <span>Live Demo</span>
-          </a>
+          {links.demo && (
+            <a href={links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-text-heading hover:text-primary transition-all font-bold group/link">
+              <ExternalLink size={22} className="group-hover/link:scale-110 transition-transform" />
+              <span className="border-b-2 border-transparent group-hover/link:border-primary">Live Experience</span>
+            </a>
+          )}
           {demoAccess && (
-             <button className="flex items-center space-x-2 px-6 py-2 bg-secondary/20 border border-secondary/40 text-secondary rounded-lg font-bold hover:bg-secondary/30 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-secondary/10 text-sm">
-                <Lock size={16} />
-                <span>Try Demo</span>
+             <button className="flex items-center space-x-3 px-8 py-3 bg-secondary text-white rounded-xl font-bold hover:bg-secondary/90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-secondary/20 text-sm">
+                <Lock size={18} />
+                <span>Launch Demo</span>
              </button>
           )}
         </div>
@@ -123,7 +125,7 @@ export default function Projects() {
               "Real-time push notifications"
             ]}
             tech={["MERN", "TypeScript", "Socket.IO", "WebRTC"]}
-            links={{ github: "#", demo: "#" }}
+            links={{ github: "https://github.com/ansaralikunju311311/Occasio", }}
             isFeatured
           />
 
@@ -138,8 +140,7 @@ export default function Projects() {
               "Integrated medical records management"
             ]}
             tech={["MERN Stack", "Socket.IO", "JWT"]}
-            links={{ github: "#", demo: "#" }}
-            demoAccess="Demo access available for Admin, Doctor, and User roles. Use the 'Try Demo' button to auto-login."
+            links={{ github: "https://github.com/ansaralikunju311311/HealthHive", demo: "https://health-hive-lat51u3rs-ansar-as-projects.vercel.app/" }}
           />
         </div>
       </div>
