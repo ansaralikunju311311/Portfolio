@@ -67,7 +67,7 @@ export default function Hero() {
             <span>Contact Me</span>
           </a>
           <a
-            href="/resume.pdf"
+            href="/AnsarAlikunjuFinalCV.pdf"
             download
             className="group flex items-center space-x-2 px-8 py-4 bg-accent/20 border border-accent/30 text-accent rounded-xl font-semibold hover:bg-accent/30 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/10"
           >
