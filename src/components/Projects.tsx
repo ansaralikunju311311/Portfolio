@@ -154,7 +154,10 @@ export default function Projects() {
               "Pixel-perfect responsive design"
             ]}
             tech={["React", "Redux Toolkit", "Recharts", "Tailwind"]}
-            links={{ github: "https://github.com/ansaralikunju311311/finance-dashboard" }}
+            links={{ 
+              github: "https://github.com/ansaralikunju311311/dashboard",
+              demo: "https://project-1kkyp.vercel.app" 
+            }}
           />
         </div>
       </div>
