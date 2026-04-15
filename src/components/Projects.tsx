@@ -142,6 +142,20 @@ export default function Projects() {
             tech={["MERN Stack", "Socket.IO", "JWT"]}
             links={{ github: "https://github.com/ansaralikunju311311/HealthHive", demo: "https://health-hive-lat51u3rs-ansar-as-projects.vercel.app/" }}
           />
+          <ProjectCard
+            title="Finance Analytics Dashboard"
+            description="A high-performance interactive dashboard enabling users to track real-time financial activity and gain deep insights through dynamic data visualizations and role-based simulation."
+            features={[
+              "Financial summary: Balance, Income, Expenses",
+              "Interactive Recharts for spending trends",
+              "Reusable table with search & filtering",
+              "Role-based UI (Admin & Viewer modes)",
+              "Automated spending pattern insights",
+              "Pixel-perfect responsive design"
+            ]}
+            tech={["React", "Redux Toolkit", "Recharts", "Tailwind"]}
+            links={{ github: "https://github.com/ansaralikunju311311/finance-dashboard" }}
+          />
         </div>
       </div>
     </section>

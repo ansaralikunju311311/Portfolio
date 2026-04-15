@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Globe, Rocket, Mail } from "lucide-react";
+import { ArrowRight, Code2, Globe, Rocket, Mail, Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -65,6 +65,14 @@ export default function Hero() {
           >
             <Mail size={18} className="group-hover:rotate-12 transition-transform" />
             <span>Contact Me</span>
+          </a>
+          <a
+            href="/resume.pdf"
+            download
+            className="group flex items-center space-x-2 px-8 py-4 bg-accent/20 border border-accent/30 text-accent rounded-xl font-semibold hover:bg-accent/30 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/10"
+          >
+            <Download size={18} className="group-hover:translate-y-1 transition-transform" />
+            <span>Resume</span>
           </a>
         </motion.div>
 

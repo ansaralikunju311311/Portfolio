@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Layout as FrontendIcon, Database, Wrench, Brain } from "lucide-react";
+import { Server, Layout as FrontendIcon, Database, Wrench, Brain, Layers, Cloud } from "lucide-react";
 
 const skillCategories = [
   {
@@ -21,10 +21,26 @@ const skillCategories = [
     skills: ["MongoDB", "PostgreSQL"],
   },
   {
+    title: "Architecture",
+    icon: <Layers size={24} />,
+    color: "text-secondary",
+    skills: [
+      "MVC Repository Architecture",
+      "Clean Architecture",
+      "Microservices Concept",
+    ],
+  },
+  {
+    title: "Deployment",
+    icon: <Cloud size={24} />,
+    color: "text-primary",
+    skills: ["AWS", "Vercel", "Render", "Cloudinary", "Docker"],
+  },
+  {
     title: "Tools",
     icon: <Wrench size={24} />,
     color: "text-text-heading",
-    skills: ["Git & GitHub", "Docker", "Postman"],
+    skills: ["Git & GitHub", "Postman", "Vite", "Figma"],
   },
   {
     title: "Concepts",
