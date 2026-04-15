@@ -14,13 +14,13 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center space-x-8">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary transition-colors">
+            <a href="https://github.com/ansaralikunju311311" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-secondary transition-colors">
+            <a href="https://www.linkedin.com/in/ansar-a-0b210620b/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-secondary transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:ansar@example.com" className="text-slate-500 hover:text-accent transition-colors">
+            <a href="mailto:ansarpanoor311@gmail.com" className="text-slate-500 hover:text-accent transition-colors">
               <Mail size={20} />
             </a>
           </div>

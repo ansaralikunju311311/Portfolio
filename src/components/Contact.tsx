@@ -29,33 +29,33 @@ export default function Contact() {
             </p>
 
             <div className="space-y-6">
-              <a href="mailto:ansar@example.com" className="flex items-center space-x-4 group p-4 glass rounded-2xl hover:border-primary/50 transition-all">
+              <a href="mailto:ansarpanoor311@gmail.com" className="flex items-center space-x-4 group p-4 glass rounded-2xl hover:border-primary/50 transition-all">
                 <div className="p-3 bg-primary/20 rounded-xl text-primary group-hover:bg-primary group-hover:text-slate-100 transition-colors">
                    <Mail size={24} />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-slate-500 font-bold">Email</p>
-                  <p className="text-slate-200 font-semibold group-hover:text-primary transition-colors">ansar.a@example.com</p>
+                  <p className="text-slate-200 font-semibold group-hover:text-primary transition-colors">ansarpanoor311@gmail.com</p>
                 </div>
               </a>
 
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group p-4 glass rounded-2xl hover:border-secondary/50 transition-all">
+              <a href="https://www.linkedin.com/in/ansar-a-0b210620b/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group p-4 glass rounded-2xl hover:border-secondary/50 transition-all">
                 <div className="p-3 bg-secondary/20 rounded-xl text-secondary group-hover:bg-secondary group-hover:text-slate-100 transition-colors">
                    <Linkedin size={24} />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-slate-500 font-bold">LinkedIn</p>
-                  <p className="text-slate-200 font-semibold group-hover:text-secondary transition-colors">linkedin.com/in/ansar-a</p>
+                  <p className="text-slate-200 font-semibold group-hover:text-secondary transition-colors">Ansar</p>
                 </div>
               </a>
 
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group p-4 glass rounded-2xl hover:border-accent/50 transition-all">
+              <a href="https://github.com/ansaralikunju311311" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group p-4 glass rounded-2xl hover:border-accent/50 transition-all">
                 <div className="p-3 bg-accent/20 rounded-xl text-accent group-hover:bg-accent group-hover:text-slate-100 transition-colors">
                    <Github size={24} />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-slate-500 font-bold">GitHub</p>
-                  <p className="text-slate-200 font-semibold group-hover:text-accent transition-colors">github.com/ansar-a</p>
+                  <p className="text-slate-200 font-semibold group-hover:text-accent transition-colors">github.com/ansaralikunju311311</p>
                 </div>
               </a>
             </div>
